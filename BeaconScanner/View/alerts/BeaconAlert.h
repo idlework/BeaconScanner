@@ -9,6 +9,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <FlatUIKit.h>
 
+#import "BeaconRegions.h"
+
 @interface BeaconAlert : FUIAlertView
 
 @property (weak, nonatomic) CLBeacon *beacon;

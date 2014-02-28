@@ -15,7 +15,7 @@
 @implementation MainViewController
 
 @synthesize beaconLocationManager = _beaconLocationManager;
-@synthesize beaconTable = _beaconTable;
+@synthesize beaconCollection = _beaconCollection;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -23,7 +23,6 @@
     
     if (self)
     {
-        
     }
     
     return self;
@@ -38,8 +37,9 @@
     _beaconLocationManager = [[BeaconLocationManager alloc] init];
     _beaconLocationManager.delegate = self;
     
-    _beaconTable = [[BeaconTableView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:_beaconTable];
+    _beaconCollection = [[BeaconCollectionView alloc] initWithFrame:self.view.frame];
+    _beaconCollection.delegate = self;
+    [self.view addSubview:_beaconCollection];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,27 +47,19 @@
     [super didReceiveMemoryWarning];
 }
 
-
-#pragma mark - beacon detail alert
-
-- (void)showAlertViewByBeacon:(CLBeacon *)beacon;
-{
-    
-}
-
 #pragma mark - BeaconLocationManager delegates
 
 - (void)beaconCollectionUpdated:(NSArray *)beacons
 {
-    _beaconTable.beacons = beacons;
+    _beaconCollection.beacons = beacons;
 }
 
-#pragma mark - BeaconTableView delegates
+#pragma mark - BeaconCollectionView delegates
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    BeaconAlert *alert = [[BeaconAlert alloc] initWithBeacon:_beaconTable.beacons[indexPath.row]];
-//    [alert show];
-//}
+- (void)beaconSelected:(CLBeacon *)beacon
+{
+    BeaconAlert *alert = [[BeaconAlert alloc] initWithBeacon:beacon];
+    [alert show];
+}
 
 @end

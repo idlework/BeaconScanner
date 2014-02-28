@@ -10,13 +10,24 @@
 
 @implementation BeaconAlert
 
-@synthesize beacon = _beacon;
-
 - (id)initWithBeacon:(CLBeacon *)beacon
 {
-    _beacon = beacon;
+    NSString *title;
     
-    self = [super initWithTitle:@"Hello" message:@"This is an alert view" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
+    if ([beacon.proximityUUID.UUIDString isEqualToString:EstimoteRegion])
+    {
+        title = @"Estimote";
+    } else if ([beacon.proximityUUID.UUIDString isEqualToString:GimbalRegion])
+    {
+        title = @"Gimbal";
+    } else
+    {
+        title = @"Generic";
+    }
+    
+    NSString *description = [NSString stringWithFormat:@"UUID: %@\n Major: %@\n Minor: %@\n Accuracy: %.2fm", beacon.proximityUUID.UUIDString, [beacon.major stringValue], [beacon.minor stringValue], beacon.accuracy];
+    
+    self = [super initWithTitle:title message:description delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil, nil];
     
     if (self)
     {

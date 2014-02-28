@@ -12,14 +12,12 @@
 
 #import "BeaconLocationManagerDelegate.h"
 #import "BeaconLocationManager.h"
-#import "BeaconTableView.h"
+#import "BeaconCollectionView.h"
 #import "BeaconAlert.h"
 
-@interface MainViewController : UIViewController <CLLocationManagerDelegate, BeaconLocationManagerDelegate>
+@interface MainViewController : UIViewController <CLLocationManagerDelegate, BeaconLocationManagerDelegate, BeaconCollectionViewDelegate>
 
 @property (strong, nonatomic) BeaconLocationManager *beaconLocationManager;
-@property (strong, nonatomic) BeaconTableView *beaconTable;
-
-- (void)showAlertViewByBeacon:(CLBeacon *)beacon;
+@property (strong, nonatomic) BeaconCollectionView *beaconCollection;
 
 @end

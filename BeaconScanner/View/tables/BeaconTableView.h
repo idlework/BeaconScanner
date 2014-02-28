@@ -10,6 +10,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import <FlatUIKit.h>
 
+//#import "BeaconLocationManagerDelegate.h"
+
 @interface BeaconTableView : UITableView <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray *beacons;

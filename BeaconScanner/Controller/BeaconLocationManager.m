@@ -41,7 +41,7 @@
 {
     CLBeacon *beacon;
     NSString *key;
-    bool updated;
+    bool updated = NO;
     
     for (NSUInteger i = 0; i < beacons.count; i++)
     {

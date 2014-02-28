@@ -23,6 +23,15 @@
 		045C4E8A18BD01BF0067B5A7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045C4E8818BD01BF0067B5A7 /* MainViewController.xib */; };
 		045C4E8D18BD049C0067B5A7 /* BeaconAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 045C4E8C18BD049C0067B5A7 /* BeaconAlert.m */; };
 		045C4E9118BDE4600067B5A7 /* BeaconTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045C4E9018BDE4600067B5A7 /* BeaconTableView.m */; };
+		048D033F18C0923D0023C7D5 /* Estimote_Beacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 048D033918C0923D0023C7D5 /* Estimote_Beacon.png */; };
+		048D034018C0923D0023C7D5 /* Estimote_Beacon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048D033A18C0923D0023C7D5 /* Estimote_Beacon@2x.png */; };
+		048D034118C0923D0023C7D5 /* Generic_Beacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 048D033B18C0923D0023C7D5 /* Generic_Beacon.png */; };
+		048D034218C0923D0023C7D5 /* Generic_Beacon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048D033C18C0923D0023C7D5 /* Generic_Beacon@2x.png */; };
+		048D034318C0923D0023C7D5 /* Gimbal_Beacon.png in Resources */ = {isa = PBXBuildFile; fileRef = 048D033D18C0923D0023C7D5 /* Gimbal_Beacon.png */; };
+		048D034418C0923D0023C7D5 /* Gimbal_Beacon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 048D033E18C0923D0023C7D5 /* Gimbal_Beacon@2x.png */; };
+		048D034718C0929A0023C7D5 /* BeaconCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048D034618C0929A0023C7D5 /* BeaconCollectionView.m */; };
+		048D035218C0957D0023C7D5 /* BeaconCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048D035118C0957D0023C7D5 /* BeaconCollectionCell.m */; };
+		048D035418C095A70023C7D5 /* BeaconCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048D035318C095A70023C7D5 /* BeaconCollectionCell.xib */; };
 		04EB2FE618BE42CC007949E9 /* BeaconLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB2FE518BE42CC007949E9 /* BeaconLocationManager.m */; };
 		04EB2FE918BE4340007949E9 /* BeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EB2FE818BE4340007949E9 /* BeaconRegion.m */; };
 		B2409B6549544824A9D9653E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8181A8B09EF3480293871E44 /* libPods.a */; };
@@ -40,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		044B08AC18BF935F003F101E /* BeaconLocationManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconLocationManagerDelegate.h; sourceTree = "<group>"; };
+		044B08AD18BFAE1C003F101E /* BeaconTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconTableViewDelegate.h; path = tables/BeaconTableViewDelegate.h; sourceTree = "<group>"; };
 		045C4E5118BCFFAC0067B5A7 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045C4E5418BCFFAC0067B5A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		045C4E5618BCFFAC0067B5A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,6 +73,19 @@
 		045C4E8C18BD049C0067B5A7 /* BeaconAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconAlert.m; path = alerts/BeaconAlert.m; sourceTree = "<group>"; };
 		045C4E8F18BDE4600067B5A7 /* BeaconTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconTableView.h; path = tables/BeaconTableView.h; sourceTree = "<group>"; };
 		045C4E9018BDE4600067B5A7 /* BeaconTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconTableView.m; path = tables/BeaconTableView.m; sourceTree = "<group>"; };
+		048D033918C0923D0023C7D5 /* Estimote_Beacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Estimote_Beacon.png; sourceTree = "<group>"; };
+		048D033A18C0923D0023C7D5 /* Estimote_Beacon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Estimote_Beacon@2x.png"; sourceTree = "<group>"; };
+		048D033B18C0923D0023C7D5 /* Generic_Beacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Generic_Beacon.png; sourceTree = "<group>"; };
+		048D033C18C0923D0023C7D5 /* Generic_Beacon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Generic_Beacon@2x.png"; sourceTree = "<group>"; };
+		048D033D18C0923D0023C7D5 /* Gimbal_Beacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gimbal_Beacon.png; sourceTree = "<group>"; };
+		048D033E18C0923D0023C7D5 /* Gimbal_Beacon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gimbal_Beacon@2x.png"; sourceTree = "<group>"; };
+		048D034518C0929A0023C7D5 /* BeaconCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconCollectionView.h; path = collections/BeaconCollectionView.h; sourceTree = "<group>"; };
+		048D034618C0929A0023C7D5 /* BeaconCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconCollectionView.m; path = collections/BeaconCollectionView.m; sourceTree = "<group>"; };
+		048D034C18C093170023C7D5 /* BeaconCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconCollectionViewDelegate.h; path = collections/BeaconCollectionViewDelegate.h; sourceTree = "<group>"; };
+		048D035018C0957D0023C7D5 /* BeaconCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconCollectionCell.h; path = collections/cells/BeaconCollectionCell.h; sourceTree = "<group>"; };
+		048D035118C0957D0023C7D5 /* BeaconCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconCollectionCell.m; path = collections/cells/BeaconCollectionCell.m; sourceTree = "<group>"; };
+		048D035318C095A70023C7D5 /* BeaconCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BeaconCollectionCell.xib; sourceTree = "<group>"; };
+		048D035618C0BC2C0023C7D5 /* BeaconRegions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconRegions.h; path = statics/BeaconRegions.h; sourceTree = "<group>"; };
 		04EB2FE418BE42CC007949E9 /* BeaconLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconLocationManager.h; sourceTree = "<group>"; };
 		04EB2FE518BE42CC007949E9 /* BeaconLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconLocationManager.m; sourceTree = "<group>"; };
 		04EB2FE718BE4340007949E9 /* BeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconRegion.h; sourceTree = "<group>"; };
@@ -131,6 +154,8 @@
 		045C4E5A18BCFFAC0067B5A7 /* BeaconScanner */ = {
 			isa = PBXGroup;
 			children = (
+				048D035518C0BBFB0023C7D5 /* statics */,
+				048D033818C0923D0023C7D5 /* assets */,
 				045C4E8318BD00850067B5A7 /* Controller */,
 				045C4E8418BD00850067B5A7 /* Model */,
 				045C4E8518BD00850067B5A7 /* View */,
@@ -193,6 +218,7 @@
 		045C4E8518BD00850067B5A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				048D034818C092A40023C7D5 /* collection */,
 				04EB2FE318BE3C40007949E9 /* tables */,
 				045C4E8E18BD060E0067B5A7 /* alerts */,
 				045C4E8618BD01BF0067B5A7 /* MainViewController.h */,
@@ -211,9 +237,52 @@
 			name = alerts;
 			sourceTree = "<group>";
 		};
+		048D033818C0923D0023C7D5 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				048D033918C0923D0023C7D5 /* Estimote_Beacon.png */,
+				048D033A18C0923D0023C7D5 /* Estimote_Beacon@2x.png */,
+				048D033B18C0923D0023C7D5 /* Generic_Beacon.png */,
+				048D033C18C0923D0023C7D5 /* Generic_Beacon@2x.png */,
+				048D033D18C0923D0023C7D5 /* Gimbal_Beacon.png */,
+				048D033E18C0923D0023C7D5 /* Gimbal_Beacon@2x.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		048D034818C092A40023C7D5 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				048D034F18C095280023C7D5 /* cells */,
+				048D034C18C093170023C7D5 /* BeaconCollectionViewDelegate.h */,
+				048D034518C0929A0023C7D5 /* BeaconCollectionView.h */,
+				048D034618C0929A0023C7D5 /* BeaconCollectionView.m */,
+			);
+			name = collection;
+			sourceTree = "<group>";
+		};
+		048D034F18C095280023C7D5 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				048D035018C0957D0023C7D5 /* BeaconCollectionCell.h */,
+				048D035118C0957D0023C7D5 /* BeaconCollectionCell.m */,
+				048D035318C095A70023C7D5 /* BeaconCollectionCell.xib */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		048D035518C0BBFB0023C7D5 /* statics */ = {
+			isa = PBXGroup;
+			children = (
+				048D035618C0BC2C0023C7D5 /* BeaconRegions.h */,
+			);
+			name = statics;
+			sourceTree = "<group>";
+		};
 		04EB2FE318BE3C40007949E9 /* tables */ = {
 			isa = PBXGroup;
 			children = (
+				044B08AD18BFAE1C003F101E /* BeaconTableViewDelegate.h */,
 				045C4E8F18BDE4600067B5A7 /* BeaconTableView.h */,
 				045C4E9018BDE4600067B5A7 /* BeaconTableView.m */,
 			);
@@ -298,8 +367,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				045C4E5F18BCFFAC0067B5A7 /* InfoPlist.strings in Resources */,
+				048D034418C0923D0023C7D5 /* Gimbal_Beacon@2x.png in Resources */,
 				045C4E8A18BD01BF0067B5A7 /* MainViewController.xib in Resources */,
+				048D034018C0923D0023C7D5 /* Estimote_Beacon@2x.png in Resources */,
+				048D034118C0923D0023C7D5 /* Generic_Beacon.png in Resources */,
 				045C4E6718BCFFAC0067B5A7 /* Images.xcassets in Resources */,
+				048D034218C0923D0023C7D5 /* Generic_Beacon@2x.png in Resources */,
+				048D033F18C0923D0023C7D5 /* Estimote_Beacon.png in Resources */,
+				048D034318C0923D0023C7D5 /* Gimbal_Beacon.png in Resources */,
+				048D035418C095A70023C7D5 /* BeaconCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,11 +427,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048D034718C0929A0023C7D5 /* BeaconCollectionView.m in Sources */,
 				045C4E9118BDE4600067B5A7 /* BeaconTableView.m in Sources */,
 				045C4E8D18BD049C0067B5A7 /* BeaconAlert.m in Sources */,
 				04EB2FE618BE42CC007949E9 /* BeaconLocationManager.m in Sources */,
 				045C4E6518BCFFAC0067B5A7 /* AppDelegate.m in Sources */,
 				045C4E8918BD01BF0067B5A7 /* MainViewController.m in Sources */,
+				048D035218C0957D0023C7D5 /* BeaconCollectionCell.m in Sources */,
 				045C4E6118BCFFAC0067B5A7 /* main.m in Sources */,
 				04EB2FE918BE4340007949E9 /* BeaconRegion.m in Sources */,
 			);

@@ -24,10 +24,7 @@ static NSString * const beaconHeaderIdentifier = @"BeaconHeader";
         self.delegate = self;
         self.dataSource = self;
         
-        //Set the separator color
         self.separatorColor = [UIColor cloudsColor];
-        
-        //Set the background color
         self.backgroundColor = [UIColor cloudsColor];
         self.backgroundView = nil;
     }
@@ -50,17 +47,14 @@ static NSString * const beaconHeaderIdentifier = @"BeaconHeader";
     cell.cornerRadius = 5.0f;
     cell.textLabel.text = beacon.debugDescription;
     
-//    cell.detailTextLabel.text = [beacon.major stringValue];
-//    cell.textLabel.text = beacon.proximityUUID.UUIDString;
-//    cell.detailTextLabel.text = [self
-//    cell.detailTextLabel.textColor = [UIColor grayColor];
-    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self deselectRowAtIndexPath:indexPath animated:YES];
+    
+//    [self.delegate beaconSelected:_beacons[indexPath.row]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -85,7 +79,6 @@ static NSString * const beaconHeaderIdentifier = @"BeaconHeader";
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    // Adds an activity indicator view to the section header
     UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     indicatorView.frame = (CGRect){(CGPoint){205, 25}, indicatorView.frame.size};
     indicatorView.backgroundColor = [UIColor cloudsColor];
