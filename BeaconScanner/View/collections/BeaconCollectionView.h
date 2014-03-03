@@ -10,13 +10,17 @@
 
 #import "BeaconCollectionViewDelegate.h"
 #import "BeaconCollectionCell.h"
+#import "BeaconCollectionHeader.h"
+#import "BeaconProximity.h"
 #import "UIColor+FlatUI.h"
 
 @interface BeaconCollectionView : UIView <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (weak, nonatomic) id<BeaconCollectionViewDelegate> delegate;
 
-@property (strong, nonatomic) NSArray *beacons;
+@property (strong, nonatomic) NSMutableDictionary *beacons;
 @property (strong, nonatomic) UICollectionView *collectionView;
+
+- (CLBeacon *) getBeaconByIndexPath:(NSIndexPath *)indexPath;
 
 @end

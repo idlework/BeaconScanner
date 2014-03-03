@@ -10,6 +10,6 @@
 
 @protocol BeaconLocationManagerDelegate
 
-- (void)beaconCollectionUpdated:(NSArray *)beacons;
+- (void)beaconCollectionUpdated:(NSMutableDictionary *)beacons;
 
 @end

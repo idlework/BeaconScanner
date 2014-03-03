@@ -20,8 +20,6 @@
         
         self.backgroundView = [[UIView alloc] initWithFrame:frame];
         self.selectedBackgroundView = [[UIView alloc] initWithFrame:frame];
-        
-        [self setCellStyleWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor]];
     }
     
     return self;
@@ -32,7 +30,7 @@
 - (void)setBeacon:(CLBeacon *)beacon
 {
     self.textLabel.text = [NSString stringWithFormat:@"%@%@", @"ID: ", [beacon.major stringValue]];
-    [self setCellStyleWithColor:[UIColor greenSeaColor] selectedColor:[UIColor cloudsColor]];
+    [self setCellStyleWithColor:[ColorPalette grapefruitOrangeColor] selectedColor:[ColorPalette vanillaYoghurtYellowColor]];
     [self setImage:beacon.proximityUUID.UUIDString];
 }
 
@@ -43,10 +41,7 @@
     self.backgroundView.backgroundColor = color;
     self.selectedBackgroundView.backgroundColor = selectedColor;
     
-    //The labels need a clear background color or they will look very funky
     self.textLabel.backgroundColor = [UIColor clearColor];
-    
-    //Guess some good text colors
     self.textLabel.textColor = selectedColor;
     self.textLabel.highlightedTextColor = color;
 }

@@ -39,27 +39,37 @@
 
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
-    CLBeacon *beacon;
-    NSString *key;
-    bool updated = NO;
+    [_beaconsReference removeAllObjects];
     
-    for (NSUInteger i = 0; i < beacons.count; i++)
+    NSArray *unknownBeacons = [beacons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"proximity = %d", CLProximityUnknown]];
+    
+    if([unknownBeacons count])
     {
-        beacon = beacons[i];
-        key = [beacon.major stringValue];
-        
-        if (![_beaconsReference objectForKey:key])
-        {
-            [_beaconsReference setObject:beacon forKey:key];
-            
-            updated = YES;
-        }
+        [_beaconsReference setObject:unknownBeacons forKey:[NSNumber numberWithInt:CLProximityUnknown]];
     }
     
-    if (updated)
+    NSArray *immediateBeacons = [beacons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"proximity = %d", CLProximityImmediate]];
+    
+    if([immediateBeacons count])
     {
-        [self.delegate beaconCollectionUpdated:_beaconsReference.allValues];
+        [_beaconsReference setObject:immediateBeacons forKey:[NSNumber numberWithInt:CLProximityImmediate]];
     }
+    
+    NSArray *nearBeacons = [beacons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"proximity = %d", CLProximityNear]];
+    
+    if([nearBeacons count])
+    {
+        [_beaconsReference setObject:nearBeacons forKey:[NSNumber numberWithInt:CLProximityNear]];
+    }
+    
+    NSArray *farBeacons = [beacons filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"proximity = %d", CLProximityFar]];
+    
+    if([farBeacons count])
+    {
+        [_beaconsReference setObject:farBeacons forKey:[NSNumber numberWithInt:CLProximityFar]];
+    }
+    
+    [self.delegate beaconCollectionUpdated:_beaconsReference];
 }
 
 - (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error

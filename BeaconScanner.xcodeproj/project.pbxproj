@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042CCC6918C490CE00128A3F /* Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 042CCC6718C490CE00128A3F /* Menu.png */; };
+		042CCC6A18C490CE00128A3F /* Menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042CCC6818C490CE00128A3F /* Menu@2x.png */; };
+		042CCC6D18C497F100128A3F /* ColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CCC6C18C497F100128A3F /* ColorPalette.m */; };
+		042CCC7118C4AF3600128A3F /* BeaconCollectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CCC7018C4AF3600128A3F /* BeaconCollectionHeader.m */; };
+		042CCC7318C4AF9F00128A3F /* BeaconCollectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042CCC7218C4AF9F00128A3F /* BeaconCollectionHeader.xib */; };
+		042CCC7918C4B55B00128A3F /* BeaconProximity.m in Sources */ = {isa = PBXBuildFile; fileRef = 042CCC7818C4B55B00128A3F /* BeaconProximity.m */; };
 		045C4E5518BCFFAC0067B5A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045C4E5418BCFFAC0067B5A7 /* Foundation.framework */; };
 		045C4E5718BCFFAC0067B5A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045C4E5618BCFFAC0067B5A7 /* CoreGraphics.framework */; };
 		045C4E5918BCFFAC0067B5A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045C4E5818BCFFAC0067B5A7 /* UIKit.framework */; };
@@ -48,6 +54,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042CCC6718C490CE00128A3F /* Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu.png; sourceTree = "<group>"; };
+		042CCC6818C490CE00128A3F /* Menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menu@2x.png"; sourceTree = "<group>"; };
+		042CCC6B18C497F100128A3F /* ColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorPalette.h; path = statics/ColorPalette.h; sourceTree = "<group>"; };
+		042CCC6C18C497F100128A3F /* ColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorPalette.m; path = statics/ColorPalette.m; sourceTree = "<group>"; };
+		042CCC6F18C4AF3600128A3F /* BeaconCollectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconCollectionHeader.h; path = collections/headers/BeaconCollectionHeader.h; sourceTree = "<group>"; };
+		042CCC7018C4AF3600128A3F /* BeaconCollectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconCollectionHeader.m; path = collections/headers/BeaconCollectionHeader.m; sourceTree = "<group>"; };
+		042CCC7218C4AF9F00128A3F /* BeaconCollectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BeaconCollectionHeader.xib; path = collections/headers/BeaconCollectionHeader.xib; sourceTree = "<group>"; };
+		042CCC7718C4B55B00128A3F /* BeaconProximity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconProximity.h; path = statics/BeaconProximity.h; sourceTree = "<group>"; };
+		042CCC7818C4B55B00128A3F /* BeaconProximity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeaconProximity.m; path = statics/BeaconProximity.m; sourceTree = "<group>"; };
 		044B08AC18BF935F003F101E /* BeaconLocationManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconLocationManagerDelegate.h; sourceTree = "<group>"; };
 		044B08AD18BFAE1C003F101E /* BeaconTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconTableViewDelegate.h; path = tables/BeaconTableViewDelegate.h; sourceTree = "<group>"; };
 		045C4E5118BCFFAC0067B5A7 /* BeaconScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +134,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042CCC6E18C4AED900128A3F /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				042CCC6F18C4AF3600128A3F /* BeaconCollectionHeader.h */,
+				042CCC7018C4AF3600128A3F /* BeaconCollectionHeader.m */,
+				042CCC7218C4AF9F00128A3F /* BeaconCollectionHeader.xib */,
+			);
+			name = headers;
+			sourceTree = "<group>";
+		};
 		045C4E4818BCFFAC0067B5A7 = {
 			isa = PBXGroup;
 			children = (
@@ -218,7 +243,7 @@
 		045C4E8518BD00850067B5A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				048D034818C092A40023C7D5 /* collection */,
+				048D034818C092A40023C7D5 /* collections */,
 				04EB2FE318BE3C40007949E9 /* tables */,
 				045C4E8E18BD060E0067B5A7 /* alerts */,
 				045C4E8618BD01BF0067B5A7 /* MainViewController.h */,
@@ -240,6 +265,8 @@
 		048D033818C0923D0023C7D5 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				042CCC6718C490CE00128A3F /* Menu.png */,
+				042CCC6818C490CE00128A3F /* Menu@2x.png */,
 				048D033918C0923D0023C7D5 /* Estimote_Beacon.png */,
 				048D033A18C0923D0023C7D5 /* Estimote_Beacon@2x.png */,
 				048D033B18C0923D0023C7D5 /* Generic_Beacon.png */,
@@ -250,15 +277,16 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
-		048D034818C092A40023C7D5 /* collection */ = {
+		048D034818C092A40023C7D5 /* collections */ = {
 			isa = PBXGroup;
 			children = (
+				042CCC6E18C4AED900128A3F /* headers */,
 				048D034F18C095280023C7D5 /* cells */,
 				048D034C18C093170023C7D5 /* BeaconCollectionViewDelegate.h */,
 				048D034518C0929A0023C7D5 /* BeaconCollectionView.h */,
 				048D034618C0929A0023C7D5 /* BeaconCollectionView.m */,
 			);
-			name = collection;
+			name = collections;
 			sourceTree = "<group>";
 		};
 		048D034F18C095280023C7D5 /* cells */ = {
@@ -274,7 +302,11 @@
 		048D035518C0BBFB0023C7D5 /* statics */ = {
 			isa = PBXGroup;
 			children = (
+				042CCC7718C4B55B00128A3F /* BeaconProximity.h */,
+				042CCC7818C4B55B00128A3F /* BeaconProximity.m */,
 				048D035618C0BC2C0023C7D5 /* BeaconRegions.h */,
+				042CCC6B18C497F100128A3F /* ColorPalette.h */,
+				042CCC6C18C497F100128A3F /* ColorPalette.m */,
 			);
 			name = statics;
 			sourceTree = "<group>";
@@ -367,8 +399,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				045C4E5F18BCFFAC0067B5A7 /* InfoPlist.strings in Resources */,
+				042CCC6A18C490CE00128A3F /* Menu@2x.png in Resources */,
 				048D034418C0923D0023C7D5 /* Gimbal_Beacon@2x.png in Resources */,
 				045C4E8A18BD01BF0067B5A7 /* MainViewController.xib in Resources */,
+				042CCC7318C4AF9F00128A3F /* BeaconCollectionHeader.xib in Resources */,
 				048D034018C0923D0023C7D5 /* Estimote_Beacon@2x.png in Resources */,
 				048D034118C0923D0023C7D5 /* Generic_Beacon.png in Resources */,
 				045C4E6718BCFFAC0067B5A7 /* Images.xcassets in Resources */,
@@ -376,6 +410,7 @@
 				048D033F18C0923D0023C7D5 /* Estimote_Beacon.png in Resources */,
 				048D034318C0923D0023C7D5 /* Gimbal_Beacon.png in Resources */,
 				048D035418C095A70023C7D5 /* BeaconCollectionCell.xib in Resources */,
+				042CCC6918C490CE00128A3F /* Menu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,11 +464,14 @@
 			files = (
 				048D034718C0929A0023C7D5 /* BeaconCollectionView.m in Sources */,
 				045C4E9118BDE4600067B5A7 /* BeaconTableView.m in Sources */,
+				042CCC7118C4AF3600128A3F /* BeaconCollectionHeader.m in Sources */,
 				045C4E8D18BD049C0067B5A7 /* BeaconAlert.m in Sources */,
 				04EB2FE618BE42CC007949E9 /* BeaconLocationManager.m in Sources */,
 				045C4E6518BCFFAC0067B5A7 /* AppDelegate.m in Sources */,
 				045C4E8918BD01BF0067B5A7 /* MainViewController.m in Sources */,
 				048D035218C0957D0023C7D5 /* BeaconCollectionCell.m in Sources */,
+				042CCC6D18C497F100128A3F /* ColorPalette.m in Sources */,
+				042CCC7918C4B55B00128A3F /* BeaconProximity.m in Sources */,
 				045C4E6118BCFFAC0067B5A7 /* main.m in Sources */,
 				04EB2FE918BE4340007949E9 /* BeaconRegion.m in Sources */,
 			);

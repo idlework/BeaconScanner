@@ -16,8 +16,10 @@
 {
     _main = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:_main];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = _main;
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
 }

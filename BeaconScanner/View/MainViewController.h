@@ -15,9 +15,15 @@
 #import "BeaconCollectionView.h"
 #import "BeaconAlert.h"
 
+#import "ColorPalette.h"
+
 @interface MainViewController : UIViewController <CLLocationManagerDelegate, BeaconLocationManagerDelegate, BeaconCollectionViewDelegate>
 
 @property (strong, nonatomic) BeaconLocationManager *beaconLocationManager;
 @property (strong, nonatomic) BeaconCollectionView *beaconCollection;
+
+@property (strong, nonatomic) UIBarButtonItem *menuButton;
+
+- (void)menuHandler:(id)sender;
 
 @end

@@ -17,6 +17,8 @@
 @synthesize beaconLocationManager = _beaconLocationManager;
 @synthesize beaconCollection = _beaconCollection;
 
+@synthesize menuButton = _menuButton;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,6 +36,14 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [ColorPalette vanillaYoghurtYellowColor];
+    
+    _menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Menu.png"] style:UIBarButtonItemStylePlain target:self action:@selector(menuHandler:)];
+    _menuButton.tintColor = [ColorPalette cloudWhiteColor];
+    self.navigationItem.leftBarButtonItem = _menuButton;
+    
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[ColorPalette wildSalmonRedColor]];
+    
     _beaconLocationManager = [[BeaconLocationManager alloc] init];
     _beaconLocationManager.delegate = self;
     
@@ -47,9 +57,16 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - menu handling
+
+- (void)menuHandler:(id)sender
+{
+    
+}
+
 #pragma mark - BeaconLocationManager delegates
 
-- (void)beaconCollectionUpdated:(NSArray *)beacons
+- (void)beaconCollectionUpdated:(NSMutableDictionary *)beacons
 {
     _beaconCollection.beacons = beacons;
 }
